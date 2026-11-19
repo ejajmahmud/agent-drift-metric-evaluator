@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-drift-metric-evaluator"
+version = "0.1.0"
+description = "Embedding-space Jensen-Shannon divergence and KS-test monitor tracking agent output distribution drift over time"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-drift-metric-evaluator = "agent_drift_metric_evaluator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_drift_metric_evaluator*"]
